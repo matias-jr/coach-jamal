@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Jamal Reimer brand colors - tech forward */
+    --background: 0 0% 100%;
+    --foreground: 195 38% 18%;
+    
+    /* Navy/Teal base - matching Jamal's brand */
+    --navy-dark: 198 44% 15%;
+    --navy-base: 198 38% 22%;
+    --navy-light: 198 28% 32%;
+    
+    /* Coral accent - Jamal's CTA color */
+    --coral: 355 70% 58%;
+    --coral-light: 355 70% 68%;
+    
+    /* AI tech gradients */
+    --tech-gradient-start: 195 45% 18%;
+    --tech-gradient-end: 198 50% 28%;
+    --ai-glow: 180 100% 50%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 195 38% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 38% 18%;
+
+    --primary: 198 38% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 355 70% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 198 15% 92%;
+    --muted-foreground: 198 15% 45%;
+
+    --accent: 180 80% 50%;
+    --accent-foreground: 198 38% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 198 15% 88%;
+    --input: 198 15% 88%;
+    --ring: 198 38% 22%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 198 44% 15%;
+    --foreground: 0 0% 98%;
+    
+    --card: 198 40% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 198 40% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 198 38% 22%;
+
+    --secondary: 355 70% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 198 28% 25%;
+    --muted-foreground: 198 15% 70%;
+
+    --accent: 180 80% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 198 28% 28%;
+    --input: 198 28% 28%;
+    --ring: 180 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
